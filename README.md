@@ -60,6 +60,7 @@ Type: `Object`
 Here you can provide custom release settings, according http://developer.github.com/v3/repos/releases/#create-a-release
 These section is tottaly optional. If no `tag_name` specified than `version` field, from `package.json` will be used.
 
+
 ### Usage Examples
 
 This example will:
@@ -100,7 +101,7 @@ grunt.initConfig({
         tag_name: 'v3-rc',
         name: 'jelly-bean',
         body: 'Description of the release',
-        draft: false, 
+        draft: false,
         prerelease: true
       }
     },

@@ -1,23 +1,23 @@
 {
-  "name": "grunt-github-releaser",
+  "name": "grunt-github-releaser-auth",
   "description": "Task for automating github releases",
-  "version": "0.1.18",
-  "homepage": "https://github.com/dolbyzerr/grunt-github-releaser",
+  "version": "0.2.0",
+  "homepage": "https://github.com/sumeet-singh04/grunt-github-releaser-auth",
   "author": {
-    "name": "Andrey Terentyev",
-    "email": "dolby0@gmail.com"
+    "name": "Sumeet Singh",
+    "email": "sumeet_singh871@yahoo.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dolbyzerr/grunt-github-releaser.git"
+    "url": "git://github.com/sumeet-singh04/grunt-github-releaser-auth.git"
   },
   "bugs": {
-    "url": "https://github.com/dolbyzerr/grunt-github-releaser/issues"
+    "url": "https://github.com/sumeet-singh04/grunt-github-releaser-auth/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/dolbyzerr/grunt-github-releaser/blob/master/LICENSE-MIT"
+      "url": "https://github.com/sumeet-singh04/grunt-github-releaser-auth/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {

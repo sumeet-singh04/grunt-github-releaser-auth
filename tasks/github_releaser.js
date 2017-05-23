@@ -47,7 +47,6 @@ module.exports = function(grunt) {
         fs.stat(options.file, function (err, stats) {
           fs.createReadStream(options.file).pipe(
             request.post(makeUploadUrl(options.upload_url, path.basename(options.file)), {
-              auth: options.auth,
               headers: {
                 "Content-Type": "application/zip",
                 "Content-Length": stats.size
@@ -84,8 +83,7 @@ module.exports = function(grunt) {
     //Default request options
     request = request.defaults({
       json: true,
-      headers: { 'User-Agent': 'Grunt Github release task' },
-      auth: options.auth
+      headers: { 'User-Agent': 'Grunt Github release task', "Authorization" : options.auth},
     });
 
     var files = this.files;
@@ -93,7 +91,7 @@ module.exports = function(grunt) {
     getReleases(function(err, resp, releases){
       if(err){ return showError(err); }
 
-      // console.log(releases);
+//      console.log(releases);
       // async.map(releases, deleteRelease, function(err, success){
       //   console.log('ok', err, success);
       // });
@@ -102,6 +100,7 @@ module.exports = function(grunt) {
         if(err || (release.errors && release.errors.length > 0)){
           return showError(["Error while creating release " + options.version + ":", err || release.errors]);
         }
+        //console.log(resp.body);
 
         files.forEach(function(f){
           var src = f.src.filter(function(filepath) {
